@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "nombre": "Marcos Neon Cyber-Glow",
+    "description": "Marcos de policarbonato reforzado con acabado violeta neón brillante. Estilo futurista y ultra liviano.",
+    "precio": 25000,
+    "categoria": "marcos",
+    "img": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=600&auto=format&fit=crop",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Marcos Retro Dark Pink",
+    "description": "Marcos circulares de acetato premium color rosa oscuro. Flexibles, resistentes y con bisagras de acero.",
+    "precio": 18500,
+    "categoria": "marcos",
+    "img": "https://images.unsplash.com/photo-1508296695146-257a814070b4?q=80&w=600&auto=format&fit=crop",
+    "stock": 7
+  },
+  {
+    "id": 3,
+    "nombre": "Marcos Aviador Deep Violet",
+    "description": "Clásico diseño de aviador pero con un giro moderno en metalizado violeta profundo. Almohadillas regulables.",
+    "precio": 29900,
+    "categoria": "marcos",
+    "img": "https://images.unsplash.com/photo-1511556820780-d912e42b4980?q=80&w=600&auto=format&fit=crop",
+    "stock": 5
+  },
+  {
+    "id": 4,
+    "nombre": "Marcos Sport Flex Blue",
+    "description": "Marcos deportivos engomados y ultra flexibles. Soportan caídas y altas torsiones sin deformarse.",
+    "precio": 21000,
+    "categoria": "marcos",
+    "img": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=600&auto=format&fit=crop",
+    "stock": 12
+  },
+  {
+    "id": 5,
+    "nombre": "Marcos Minimalist Black-Matte",
+    "description": "Estructura de titanio extra fina en color negro mate. Máxima elegancia y ligereza para el día a día.",
+    "precio": 35000,
+    "categoria": "marcos",
+    "img": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?q=80&w=600&auto=format&fit=crop",
+    "stock": 0
+  },
+  {
+    "id": 6,
+    "nombre": "Cristales Blue-Light HD",
+    "description": "Vidrios con filtro avanzado de luz azul. Ideales para reducir la fatiga visual frente a pantallas gamer.",
+    "precio": 12000,
+    "categoria": "vidrios",
+    "img": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?q=80&w=600&auto=format&fit=crop",
+    "stock": 15
+  },
+  {
+    "id": 7,
+    "nombre": "Cristales Fotocromáticos Pink-Reflex",
+    "description": "Vidrios inteligentes que se oscurecen con el sol, dejando un destello rosa neón reflectante en exteriores.",
+    "precio": 22000,
+    "categoria": "vidrios",
+    "img": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=600&auto=format&fit=crop",
+    "stock": 4
+  },
+  {
+    "id": 8,
+    "nombre": "Vidrios Antirréflex Premium",
+    "description": "Lentes con triple capa de tratamiento antirreflejos. Eliminan los destellos molestos de las luces nocturnas.",
+    "precio": 14500,
+    "categoria": "vidrios",
+    "img": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?q=80&w=600&auto=format&fit=crop",
+    "stock": 8
+  },
+  {
+    "id": 9,
+    "nombre": "Cristales Polarizados HD Sun",
+    "description": "Lentes de sol polarizadas de alta fidelidad. Bloquean el 100% de los reflejos horizontales del pavimento o agua.",
+    "precio": 19000,
+    "categoria": "vidrios",
+    "img": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=600&auto=format&fit=crop",
+    "stock": 9
+  },
+  {
+    "id": 10,
+    "nombre": "Vidrios de Policarbonato Antirayas",
+    "description": "Lentes orgánicas de policarbonato con laca endurecida ultra resistente a los rayones y pequeños impactos.",
+    "precio": 11000,
+    "categoria": "vidrios",
+    "img": "https://images.unsplash.com/photo-1626133418194-119f15e6c994?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 22
+  },
+  {
+    "id": 11,
+    "nombre": "Estuche Rígido Cyber-Shell",
+    "description": "Estuche reforzado antigolpes con interior de felpa suave y exterior impermeable con diseño futurista.",
+    "precio": 8500,
+    "categoria": "estuces",
+    "img": "https://media.istockphoto.com/id/627975776/photo/eyeglasses-for-sight-in-the-case.jpg?s=1024x1024&w=is&k=20&c=MdeNZlcEjJ_DyPI2PVYu6sj6daBZNTQM3-C62uMVTIk=",
+    "stock": 20
+  },
+  {
+    "id": 12,
+    "nombre": "Estuche de Cuero Dark Violet",
+    "description": "Funda elegante de cuero sintético texturizado color violeta. Cierre magnético de alta seguridad.",
+    "precio": 9800,
+    "categoria": "estuces",
+    "img": "https://media.istockphoto.com/id/1227311324/photo/close-up-hand-holding-opened-leather-box-of-sunglasses.jpg?s=1024x1024&w=is&k=20&c=oDTdm3TgxbS7UQr2OWsbOmkM3hVFkJeGZwI5YmX3-Bs=",
+    "stock": 6
+  },
+  {
+    "id": 13,
+    "nombre": "Funda de Tela Microfibra Neon",
+    "description": "Bolsita elástica de microfibra de alta densidad. Funciona tanto para proteger tus gafas como para limpiarlas.",
+    "precio": 2500,
+    "categoria": "estuces",
+    "img": "https://images.unsplash.com/photo-1632986636968-04958bfbbf3f?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 50
+  },
+  {
+    "id": 14,
+    "nombre": "Estuche Premium Aluminio Slim",
+    "description": "Carcasa rígida de aluminio anodizado. Ultra delgada, cabe en cualquier bolsillo y ofrece protección militar.",
+    "precio": 12500,
+    "categoria": "estuces",
+    "img": "https://images.unsplash.com/photo-1567193902782-de01ae371da6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 3
+  },
+  {
+    "id": 15,
+    "nombre": "Estuche Plegable Prism",
+    "description": "Estuche triangular que se pliega por completo y queda plano cuando llevas tus anteojos puestos. Ahorra espacio.",
+    "precio": 7200,
+    "categoria": "estuces",
+    "img": "https://images.unsplash.com/photo-1721264734634-4c636e9bcb18?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 14
+  },
+  {
+    "id": 16,
+    "nombre": "Líquido Limpiador Anti-Fog",
+    "description": "Fórmula avanzada antivaho. Mantiene tus cristales impecables y libres de empañamiento al usar barbijo.",
+    "precio": 4500,
+    "categoria": "soluciones",
+    "img": "https://images.unsplash.com/photo-1699722909273-e7a8e69ef511?q=80&w=401&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 30
+  },
+  {
+    "id": 17,
+    "nombre": "Kit Spray Limpiador + Paño",
+    "description": "Líquido limpiador biodegradable apto para todo tipo de cristales orgánicos. Incluye paño de microfibra premium.",
+    "precio": 5200,
+    "categoria": "soluciones",
+    "img": "https://images.unsplash.com/photo-1714479124820-8aaa9c7722af?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 18
+  },
+  {
+    "id": 18,
+    "nombre": "Gotas Humectantes Lens-Fresh",
+    "description": "Solución lubricante para ojos cansados o usuarios de lentes de contacto. Alivio inmediato de la sequedad.",
+    "precio": 6800,
+    "categoria": "soluciones",
+    "img": "https://images.unsplash.com/photo-1590007278622-50f824e1b5a8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 11
+  },
+  {
+    "id": 19,
+    "nombre": "Solución Multipropósito Contac-Care",
+    "description": "Líquido todo en uno para desinfectar, limpiar, enjuagar y conservar lentes de contacto blandas. Envase de 360ml.",
+    "precio": 8900,
+    "categoria": "soluciones",
+    "img": "https://images.unsplash.com/photo-1576503276229-998652dc7e56?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 0
+  },
+  {
+    "id": 20,
+    "nombre": "Líquido Limpiador de Lentes Pro",
+    "description": "Líquido de mantenimiento óptico profesional. Remueve grasitud y polvo de cristales de forma instantánea.",
+    "precio": 3900,
+    "categoria": "soluciones",
+    "img": "https://images.unsplash.com/photo-1617182700621-c1eb90a7e866?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "stock": 25
+  }
+]
