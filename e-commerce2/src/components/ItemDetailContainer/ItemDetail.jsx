@@ -24,7 +24,7 @@ const ItemDetail = ({setCarrito,id,nombre,description,precio,stock,img}) => {
             <figure className="lg:w-87.5 bg-base-200">
                 <img
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    src={img || "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"}
+                    src={img}
                     alt={nombre}
                 />
             </figure>

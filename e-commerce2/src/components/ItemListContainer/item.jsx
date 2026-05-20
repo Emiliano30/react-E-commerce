@@ -41,7 +41,7 @@ function Item({id,nombre,precio,description,img}){
                 </p>
 
                 <Link
-                to={`item/detail/${id}`}
+                to={`productos/item/detail/${id}`}
                 className="group flex w-24 items-center px-4 py-3 rounded-2xl 
                 bg-primary hover:bg-base-100
                 transition-all duration-300 ease-in-out

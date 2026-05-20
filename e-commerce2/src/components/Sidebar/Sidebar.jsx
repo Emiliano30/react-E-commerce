@@ -8,7 +8,7 @@ function Sidebar(){
     </h2>
 
     <Link
-        to="productos/"
+        to="/"
         className="group flex items-center px-4 py-3 rounded-2xl 
         bg-base-100 hover:bg-primary hover:text-primary-content
         transition-all duration-300 ease-in-out
@@ -19,7 +19,7 @@ function Sidebar(){
     </Link>
 
     <Link
-        to="productos/"
+        to="/"
         className="group flex items-center px-4 py-3 rounded-2xl 
         bg-base-100 hover:bg-primary hover:text-primary-content
         transition-all duration-300 ease-in-out
@@ -30,7 +30,7 @@ function Sidebar(){
     </Link>
 
     <Link
-        to="productos/"
+        to="/"
         className="group flex items-center px-4 py-3 rounded-2xl 
         bg-base-100 hover:bg-primary hover:text-primary-content
         transition-all duration-300 ease-in-out
@@ -41,7 +41,7 @@ function Sidebar(){
     </Link>
 
     <Link
-        to="productos/"
+        to="/"
         className="group flex items-center px-4 py-3 rounded-2xl 
         bg-base-100 hover:bg-primary hover:text-primary-content
         transition-all duration-300 ease-in-out
@@ -52,7 +52,7 @@ function Sidebar(){
     </Link>
 
     <Link
-        to="productos/"
+        to="/"
         className="group flex items-center px-4 py-3 rounded-2xl 
         bg-base-100 hover:bg-primary hover:text-primary-content
         transition-all duration-300 ease-in-out

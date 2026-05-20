@@ -7,7 +7,7 @@ function AppRoutes({setCarrito}){
     return(
         <Routes>
             <Route path='productos/item/detail/:id' element={<ItemDetailContainer setCarrito={setCarrito} />} />
-            <Route path='productos/' element={<ItemListContainer />} />
+            <Route path='/' element={<ItemListContainer />} />
         </Routes>
     )
 }

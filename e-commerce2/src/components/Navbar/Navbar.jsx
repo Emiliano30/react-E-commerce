@@ -14,7 +14,7 @@ const Navbar = ({ cantidad }) => {
     return (
         <div className="navbar bg-base-100 shadow-sm pl-5">
             <div className="flex-1">
-                <Link to='productos/' className="flex items-center gap-1 cursor-pointer font-bold w-50">
+                <Link to='/' className="flex items-center gap-1 cursor-pointer font-bold w-50">
                     <img src={logo} alt="" className="h-10 w-auto rounded-full"/>
                     Optica Glasses
                 </Link>
