@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Navbar = ({ cantidad }) => {
+const Navbar = () => {
 
 
 
@@ -20,7 +20,7 @@ const Navbar = ({ cantidad }) => {
                 </Link>
             </div>
             <div className="flex-none pr-4">
-                <CartWidget cantidad={cantidad} />
+                <CartWidget />
                 <Avatar />
             </div>
         </div>

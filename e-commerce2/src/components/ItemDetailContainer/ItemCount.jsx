@@ -5,9 +5,8 @@ import ButtonModal from '../Button/ButtonModal';
 import { Fullscreen } from '@boxicons/react';
 
 
-const ItemCount = ({handlerAgregar,stockDisponible,cantidadAgregada,disable}) => {
+const ItemCount = ({handlerAction,stockDisponible,disable, textoBoton = 'Agregar al carrito'}) => {
     const [count,setCount] = useState(1);
-
 
     const incrementar = function(){
         if(count < stockDisponible){
@@ -20,11 +19,13 @@ const ItemCount = ({handlerAgregar,stockDisponible,cantidadAgregada,disable}) =>
         setCount(count - 1);
     }
 
-    const agregarCarrito = function(){
+    const manejarClickAction = function(){
         if(disable) return
-        handlerAgregar(count);
+        handlerAction(count);
         setCount(1);
     }
+
+    const esQuitar = textoBoton.includes('Quitar');
 
     return (
         <div className="flex flex-col gap-4 w-full">
@@ -63,10 +64,11 @@ const ItemCount = ({handlerAgregar,stockDisponible,cantidadAgregada,disable}) =>
             </div>
 
             <ButtonModal 
-            text={'Agregar al carrito'} 
-            agregarCarrito={agregarCarrito} 
-            cantidadAgregada={cantidadAgregada}
+            text={textoBoton} 
+            onClick={manejarClickAction} 
+            cantidadModificada={count}
             disable={disable}
+            esQuitar={esQuitar}
             />
 
         </div>

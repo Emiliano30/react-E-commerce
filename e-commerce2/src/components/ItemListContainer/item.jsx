@@ -2,17 +2,17 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 
-function Item({id,nombre,precio,description,img}){
+function Item({product}){
 
 
     return(
-        <div className="group relative w-96 overflow-hidden rounded-2xl">
+        <div className="group relative w-full overflow-hidden rounded-2xl aspect-4/3">
 
         
             <img
-                src={img}
-                alt={nombre}
-                className="h-full w-full object-cover"
+                src={product.img}
+                alt={product.nombre}
+                className="absolute inset-0 h-full w-full object-cover"
             />
 
             
@@ -30,18 +30,18 @@ function Item({id,nombre,precio,description,img}){
                 text-white
                 "
             >
-                <h2 className="text-2xl font-bold">{nombre}</h2>
+                <h2 className="text-2xl font-bold">{product.nombre}</h2>
 
                 <p className="mt-2">
-                {description}
+                {product.description}
                 </p>
 
                 <p>
-                ${precio}
+                ${product.precio}
                 </p>
 
                 <Link
-                to={`productos/item/detail/${id}`}
+                to={`/item/${product.id}`}
                 className="group flex w-24 items-center px-4 py-3 rounded-2xl 
                 bg-primary hover:bg-base-100
                 transition-all duration-300 ease-in-out

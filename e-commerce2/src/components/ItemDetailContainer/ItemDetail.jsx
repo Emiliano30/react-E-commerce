@@ -1,19 +1,19 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 import { useState } from 'react';
+import { useCart } from '../../Context/CartContext';
 
+const ItemDetail = ({product}) => {
 
-const ItemDetail = ({setCarrito,id,nombre,description,precio,stock,img}) => {
-    const [cantidadAgregada,setCantidadAgregada] = useState(0)
-    const disable = stock <= 0;
+    const disable = product?.stock <= 0;
+    const {addToCart} = useCart()
 
-
+    
 
     const handlerAgregar = function (cantidadSeleccionada){
-        if(cantidadSeleccionada > stock) return
+        if(cantidadSeleccionada > product?.stock) return
 
-        setCarrito(cantidadSeleccionada)
-        setCantidadAgregada(cantidadSeleccionada)
+        addToCart(product,cantidadSeleccionada)
         return
 
     }
@@ -24,8 +24,8 @@ const ItemDetail = ({setCarrito,id,nombre,description,precio,stock,img}) => {
             <figure className="lg:w-87.5 bg-base-200">
                 <img
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    src={img}
-                    alt={nombre}
+                    src={product?.img}
+                    alt={product?.nombre}
                 />
             </figure>
 
@@ -38,32 +38,31 @@ const ItemDetail = ({setCarrito,id,nombre,description,precio,stock,img}) => {
                     </div>
 
                     <h2 className="card-title text-3xl font-black">
-                        {nombre}
+                        {product?.nombre}
                     </h2>
 
                     <p className="text-base-content/70 leading-relaxed">
-                        {description}
+                        {product?.description}
                     </p>
 
                     {disable ? (
                         <p>No hay Stock disponible por el momento!</p>
                     ) : (
                         <p className="text-base-content/70 leading-relaxed" >
-                        Stock Disponible: {stock}
+                        Stock Disponible: {product?.stock}
                         </p>
                     )}
 
                     <div className="text-3xl font-extrabold text-primary">
-                        ${precio}
+                        ${product?.precio}
                     </div>
 
                 </div>
 
                 <div className="mt-6">
                     <ItemCount 
-                    handlerAgregar={handlerAgregar} 
-                    cantidadAgregada={cantidadAgregada}
-                    stockDisponible={stock} 
+                    handlerAction={handlerAgregar} 
+                    stockDisponible={product?.stock} 
                     disable={disable}
                     />
                 </div>
