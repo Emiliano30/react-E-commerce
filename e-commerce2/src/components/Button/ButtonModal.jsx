@@ -1,8 +1,10 @@
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 
 function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar }) {
 
     const [cuerpoModal, setCuerpoModal] = useState("");
+    const navigate = useNavigate()
 
     const mostrarModal = function() {
 
@@ -14,7 +16,8 @@ function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar }) {
 
         document.getElementById('my_modal_1').showModal();
 
-        onClick(); 
+        onClick();
+
     }
 
     const modalTitle = esQuitar ? "¡Productos eliminados!" : "¡Productos agregados!";
@@ -35,7 +38,9 @@ function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar }) {
                     <p className="py-4">{cuerpoModal}</p>
                     <div className="modal-action">
                         <form method="dialog">
-                            <button className="btn">Cerrar</button>
+                            {esQuitar 
+                            ? <button className="btn">Cerrar</button>
+                            :<button className="btn" onClick={()=>navigate('/')}>Cerrar</button>}
                         </form>
                     </div>
                 </div>

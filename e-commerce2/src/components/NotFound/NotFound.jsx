@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function NotFound() {
+  const navigate = useNavigate();
   return (
 
     <div className="bg-base-300 min-h-screen flex flex-col items-center justify-center p-4 text-center">
@@ -13,9 +15,14 @@ function NotFound() {
       </p>
 
 
-      <Link to="/" className="btn btn-primary px-8 font-bold">
-        Volver al inicio
-      </Link>
+      <div className="flex flex-wrap justify-center gap-4">
+        <button onClick={() => navigate('/')} className="btn btn-primary px-8 font-bold">
+          Ir al inicio
+        </button>
+        <button onClick={() => navigate(-1)} className="btn btn-outline btn-primary px-8 font-bold">
+          Volver atrás
+        </button>
+      </div>
       
     </div>
   );

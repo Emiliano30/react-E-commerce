@@ -59,7 +59,7 @@ const ItemDetail = ({product}) => {
 
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-6 w-44">
                     <ItemCount 
                     handlerAction={handlerAgregar} 
                     stockDisponible={product?.stock} 

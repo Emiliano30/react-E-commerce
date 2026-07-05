@@ -3,13 +3,12 @@ import { Cart } from "@boxicons/react";
 import logo from '../../assets/favicon.svg'
 import CartWidget from "./CartWidget";
 import Avatar from "./Avatar";
+import OrderWidget from "./OrderWidget";
 import { Link } from "react-router-dom";
 
 
 
 const Navbar = () => {
-
-
 
     return (
         <div className="navbar bg-base-100 shadow-sm pl-5">
@@ -21,6 +20,7 @@ const Navbar = () => {
             </div>
             <div className="flex-none pr-4">
                 <CartWidget />
+                <OrderWidget />
                 <Avatar />
             </div>
         </div>

@@ -1,36 +1,30 @@
-import useFetch from "../../Hook/useFetch"
-import ProductCard from '../CardWrapper/ProductCard';
 import ItemList from "./ItemList";
 import Spinner from '../Spinner/Spinner';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Input from '../Input/Input';
 import { useParams } from 'react-router-dom';
+import { useProducts } from "../../Hook/useFirebase";
 
 
 
 function ItemListContainer () {
-  const { data, loading, error } = useFetch('/productos.json');
+
   const [busqueda,setBusqueda] = useState("");
 
   const {categoriaId} = useParams()
+
+  const {products,loading,error} = useProducts(categoriaId)
+
 
 
   function handleBusqueda(texto){
     setBusqueda(texto)
   }
 
-  const resultados = data.productos
-  .filter((p) =>
-    categoriaId
-      ? p.categoria_id === Number(categoriaId)
-      : true
-  )
+  const resultados = products
   .filter((p) =>
     p.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );
-  
-
-
   
 
   if (loading) {
@@ -58,13 +52,14 @@ function ItemListContainer () {
       <h2 className='text-3xl font-bold my-3'>Lista de Productos</h2>
 
 
-      <Input
-        type='text'
-        placeholder='Buscar...'
-        onChange={handleBusqueda}
-        value={busqueda}
-        
-      />
+      <div className="mb-6 max-w-md">
+        <Input
+          type='text'
+          placeholder='Buscar...'
+          onChange={handleBusqueda}
+          value={busqueda}
+        />
+      </div>
 
 
       {resultados.length > 0 

@@ -2,15 +2,13 @@ import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import Spinner from '../Spinner/Spinner';
-import useFetch from '../../Hook/useFetch'
+import { useProductById } from '../../Hook/useFirebase';
 
 const ItemDetailContainer = () => {
 
-    const { data, loading, error } = useFetch('/productos.json');
-
     const {id} = useParams();
 
-    const producto = data?.productos?.find(prod => prod.id === parseInt(id))
+    const {product,loading,error} = useProductById(id)
     
     if (loading) {
         return (
@@ -36,7 +34,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='p-4'>
-            <ItemDetail product={producto} />
+            <ItemDetail product={product} />
         </div>
     );
 };

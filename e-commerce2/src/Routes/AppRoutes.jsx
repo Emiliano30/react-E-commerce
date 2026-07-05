@@ -4,6 +4,9 @@ import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailCon
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
 import NotFound from '../components/NotFound/NotFound'
 import Cart from '../components/Cart/Cart'
+import FormCheckOut from '../components/ItemDetailContainer/CheckOut/FormCheckOut'
+import Order from '../components/OrderContainer/Order'
+import OrderContainer from '../components/OrderContainer/OrderContainer'
 
 function AppRoutes(){
 
@@ -13,6 +16,9 @@ function AppRoutes(){
             <Route path='/categorias/:categoriaId' element={<ItemListContainer />} />
             <Route path='/item/:id' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<FormCheckOut />} />
+            <Route path='/order' element={<OrderContainer />} />
+            <Route path='/order/:orderId' element={<Order />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
     )

@@ -5,6 +5,8 @@ import ButtonModal from '../Button/ButtonModal';
 import { Fullscreen } from '@boxicons/react';
 
 
+
+
 const ItemCount = ({handlerAction,stockDisponible,disable, textoBoton = 'Agregar al carrito'}) => {
     const [count,setCount] = useState(1);
 

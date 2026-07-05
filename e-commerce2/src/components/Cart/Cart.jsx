@@ -1,10 +1,12 @@
 import ProductCard from "../CardWrapper/ProductCard";
 import { useCart } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart } = useCart();
-    const totalCart = cart.reduce((acc, item) => acc + item.precio * item.quantity, 0);
+    const { cart, removeFromCart, totalCart, clearCart } = useCart();
+
+    const navigate = useNavigate();
 
     if (cart.length === 0) {
         return (
@@ -50,8 +52,8 @@ const Cart = () => {
 
                     
                     <button 
+                    onClick={()=>navigate('/checkout')}
                         className="btn btn-primary font-bold px-8 shadow-lg shadow-primary/20 w-full sm:w-auto"
-                        // TODO: implementar el evento que va a finalizar la compra
                     >
                         Finalizar Compra
                     </button>

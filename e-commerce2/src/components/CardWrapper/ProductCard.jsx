@@ -39,11 +39,24 @@ function ProductCard({ product, isCartItem = false, onRemove }) {
                         </div>
 
 
-                        <ItemCount 
-                        stockDisponible={product.quantity}
-                        textoBoton="Quitar del carrito"
-                        handlerAction={(cantidadARestar) => removeFromCart(product.id, cantidadARestar)}
-                         />
+                        <div className="flex flex-col items-center gap-3">
+                            <ItemCount 
+                                stockDisponible={product.quantity}
+                                textoBoton="Quitar del carrito"
+                                handlerAction={(cantidadARestar) => removeFromCart(product.id, cantidadARestar)}
+                            />
+
+                            
+                            <Link 
+                                to={`/item/${product.id}`}
+                                className="w-full max-w-50 py-2 rounded-lg text-xs font-bold text-center
+                                border border-primary text-primary bg-transparent 
+                                hover:bg-primary hover:text-black
+                                transition-all duration-300 ease-in-out"
+                            >
+                                Ir al producto
+                            </Link>
+                        </div>
 
                     </div>
                 </div>
