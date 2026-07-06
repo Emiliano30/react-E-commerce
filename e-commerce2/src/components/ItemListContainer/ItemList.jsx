@@ -1,4 +1,4 @@
-import Item from "./ItemFinal"
+import Item from "./Item"
 
 function ItemList({productos}){
 
