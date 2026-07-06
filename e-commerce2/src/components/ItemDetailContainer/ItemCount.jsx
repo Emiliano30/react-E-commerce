@@ -7,7 +7,7 @@ import { Fullscreen } from '@boxicons/react';
 
 
 
-const ItemCount = ({handlerAction,stockDisponible,disable, textoBoton = 'Agregar al carrito'}) => {
+const ItemCount = ({handlerAction,stockDisponible,disable, textoBoton = 'Agregar al carrito', idUnico}) => {
     const [count,setCount] = useState(1);
 
     const incrementar = function(){
@@ -71,6 +71,7 @@ const ItemCount = ({handlerAction,stockDisponible,disable, textoBoton = 'Agregar
             cantidadModificada={count}
             disable={disable}
             esQuitar={esQuitar}
+            idUnico={idUnico}
             />
 
         </div>

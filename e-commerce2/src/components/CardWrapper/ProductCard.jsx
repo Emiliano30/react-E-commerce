@@ -44,6 +44,7 @@ function ProductCard({ product, isCartItem = false, onRemove }) {
                                 stockDisponible={product.quantity}
                                 textoBoton="Quitar del carrito"
                                 handlerAction={(cantidadARestar) => removeFromCart(product.id, cantidadARestar)}
+                                idUnico={product.id}
                             />
 
                             

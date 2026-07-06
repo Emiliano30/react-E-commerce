@@ -64,6 +64,7 @@ const ItemDetail = ({product}) => {
                     handlerAction={handlerAgregar} 
                     stockDisponible={product?.stock} 
                     disable={disable}
+                    idUnico={product.id}
                     />
                 </div>
 

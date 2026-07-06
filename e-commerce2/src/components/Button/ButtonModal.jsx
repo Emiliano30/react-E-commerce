@@ -1,10 +1,12 @@
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom'
 
-function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar }) {
+function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar, idUnico}) {
 
     const [cuerpoModal, setCuerpoModal] = useState("");
     const navigate = useNavigate()
+
+    const modalId = `my_modal_${idUnico}`;
 
     const mostrarModal = function() {
 
@@ -14,7 +16,7 @@ function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar }) {
 
         setCuerpoModal(textoFijo);
 
-        document.getElementById('my_modal_1').showModal();
+        document.getElementById(modalId).showModal();
 
         onClick();
 
@@ -32,7 +34,7 @@ function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar }) {
                 {text}
             </button>
 
-            <dialog id="my_modal_1" className="modal">
+            <dialog id={modalId} className="modal">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg">{modalTitle}</h3>
                     <p className="py-4">{cuerpoModal}</p>
