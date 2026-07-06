@@ -51,6 +51,7 @@ function Item({product}){
             </div>
         </div>
     )
+    
 }
 
 export default Item
