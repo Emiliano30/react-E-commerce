@@ -10,6 +10,7 @@ function ItemList({productos}){
             )}
         </div>
     )
+    
 }
 
 export default ItemList
