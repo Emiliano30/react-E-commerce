@@ -1,4 +1,4 @@
-import Item from "./Item"
+import Item from "./ItemFinal"
 
 function ItemList({productos}){
 
@@ -10,7 +10,7 @@ function ItemList({productos}){
             )}
         </div>
     )
-    
+
 }
 
 export default ItemList
