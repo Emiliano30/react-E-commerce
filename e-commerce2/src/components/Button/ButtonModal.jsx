@@ -1,54 +1,96 @@
+
 import { useState } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
-function ButtonModal({ text, onClick, disable, cantidadModificada, esQuitar, idUnico}) {
+function ButtonModal({
+    text,
+    onClick,
+    disable,
+    cantidadModificada,
+    esQuitar,
+    idUnico
+}) {
 
-    const [cuerpoModal, setCuerpoModal] = useState("");
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const modalId = `my_modal_${idUnico}`;
 
-    const mostrarModal = function() {
+    const [mensaje, setMensaje] = useState("");
 
-        const textoFijo = esQuitar 
-            ? `Se removieron ${cantidadModificada} productos del carrito.` 
-            : `Se agregaron ${cantidadModificada} productos nuevos al carrito.`;
+    const mostrarModal = () => {
 
-        setCuerpoModal(textoFijo);
+        
+        const cantidad = onClick();
 
-        document.getElementById(modalId).showModal();
+        const texto = esQuitar
+            ? `Se removieron ${cantidad} productos del carrito.`
+            : `Se agregaron ${cantidad} productos nuevos al carrito.`;
 
-        onClick();
+        setMensaje(texto);
 
-    }
+        setTimeout(() => {
+            document.getElementById(modalId)?.showModal();
+        }, 0);
+    };
 
-    const modalTitle = esQuitar ? "¡Productos eliminados!" : "¡Productos agregados!";
+    const modalTitle = esQuitar
+        ? "¡Productos eliminados!"
+        : "¡Productos agregados!";
 
     return (
         <div>
-            <button 
-                disabled={disable} 
-                className={`btn btn-block font-bold ${esQuitar ? 'btn-error btn-outline' : 'btn-primary'}`} 
+
+            <button
+                disabled={disable}
+                className={`btn btn-block font-bold ${
+                    esQuitar
+                        ? "btn-error btn-outline"
+                        : "btn-primary"
+                }`}
                 onClick={mostrarModal}
             >
                 {text}
             </button>
 
             <dialog id={modalId} className="modal">
+
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg">{modalTitle}</h3>
-                    <p className="py-4">{cuerpoModal}</p>
+
+                    <h3 className="font-bold text-lg">
+                        {modalTitle}
+                    </h3>
+
+                    <p className="py-4">
+                        {mensaje}
+                    </p>
+
                     <div className="modal-action">
+
                         <form method="dialog">
-                            {esQuitar 
-                            ? <button className="btn">Cerrar</button>
-                            :<button className="btn" onClick={()=>navigate('/')}>Cerrar</button>}
+
+                            {esQuitar ? (
+                                <button className="btn">
+                                    Cerrar
+                                </button>
+                            ) : (
+                                <button
+                                    className="btn"
+                                    onClick={() => navigate("/")}
+                                >
+                                    Cerrar
+                                </button>
+                            )}
+
                         </form>
+
                     </div>
+
                 </div>
+
             </dialog>
-        </div> 
-    )
+
+        </div>
+    );
 }
 
 export default ButtonModal;
